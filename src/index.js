@@ -56,7 +56,8 @@ function createRobot(event) {
     typeError.style.display = "none";
     nameError.style.display = "none";
     phraseError.style.display = "none";
-    if (robotName.value && robotType.value && color.value && (!canTalk.checked || canTalk.checked && robotPhrase.value)) {
+    if (robotName.value && robotType.value && color.value &&
+        (!canTalk.checked || canTalk.checked && robotPhrase.value)) {
         let type = robotType.value === "Male" ? Type.Male : Type.Female;
         const robot = new Robot(robotName.value, type, color.value, robotPhrase.value, canJump.checked, canTalk.checked, canBlink.checked);
         robotList.push(robot);
